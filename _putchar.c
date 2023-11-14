@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _putchar - print string
- * c : pointer to the string
+ * @c : pointer to the string
  *
  * Return: integer
  */
