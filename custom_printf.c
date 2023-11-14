@@ -47,10 +47,11 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'd' || *format == 'i')
 			{
-				count += 1;
 				n = va_arg(var_list, int);
 				s = my_itoa(n, x, 10);
-				write(1, s, _strlen(s));
+				len = _strlen(s);
+				count += len;
+				write(1, s, len);
 			}
 		}
 		format++;
