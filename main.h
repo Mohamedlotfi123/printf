@@ -8,5 +8,6 @@ int _printf(const char *format, ...);
 int _strlen(char *c);
 int _putchar(char *c);
 char *my_itoa(long int n, char *str, int b);
+void lower(char *str);
 
 #endif

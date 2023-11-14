@@ -82,6 +82,7 @@ int _printf(const char *format, ...)
 			if (*format == 'x')
 			{
 				s = my_itoa(va_arg(var_list, unsigned int), x, 16);
+				lower(s);
 				len = _strlen(s);
 				count += len;
 				write(1, s, len);
