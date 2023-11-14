@@ -28,13 +28,13 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'c')
 			{
-				c = va_arg(var_list, int);
+				c = (char)va_arg(var_list, int);
 				count += 1;
 				write(1, &c, 1);
 			}
 			if (*format == 's')
 			{
-				s = va_arg(var_list, char *);
+				s = (char *)va_arg(var_list, char *);
 				len = _strlen(s);
 				count += len;
 				write(1, s, len);
@@ -45,6 +45,7 @@ int _printf(const char *format, ...)
 				write(1, format, 1);
 			}
 		}
+		count += len;
 		format++;
 	}
 	va_end(var_list);
