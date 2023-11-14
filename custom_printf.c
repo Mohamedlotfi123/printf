@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'b')
 			{
-				s = my_itoa(va_arg(var_list, int), x, 2);
+				s = my_itoa(va_arg(var_list, unsigned int), x, 2);
 				len = _strlen(s);
 				count += len;
 				write(1, s, len);
