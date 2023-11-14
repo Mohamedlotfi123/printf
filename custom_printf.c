@@ -8,8 +8,9 @@
 int printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
-	int count = 0, len, n;
-	char c, *s, x[10];
+	int count = 0, len;
+	long int n;
+	char c, *s, x[25];
 	va_list var_list;
 
 	va_start(var_list, format);
@@ -47,15 +48,11 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'd' || *format == 'i')
 			{
-				n = (int)va_arg(var_list, int);
+				n = va_arg(var_list, int);
 				s = my_itoa(n, x, 10);
-				if (s == NULL)
-				{
-					s = "0";
-				}
 				len = _strlen(s);
 				count += len;
-				write(1, s, len);
+				write(1, x, len);
 			}
 		}
 		format++;
