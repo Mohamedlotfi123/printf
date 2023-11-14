@@ -7,6 +7,7 @@
  *
  * Return: pointer to str
  */
+char *my_itoa(long int n, char *str, int b);
 char *my_itoa(long int n, char *str, int b)
 {
 	int i = 0, x = 0, y, digit;
