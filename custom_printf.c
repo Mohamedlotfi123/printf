@@ -45,7 +45,6 @@ int _printf(const char *format, ...)
 				write(1, format, 1);
 			}
 		}
-		count += len;
 		format++;
 	}
 	va_end(var_list);
