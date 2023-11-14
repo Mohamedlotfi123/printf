@@ -5,6 +5,7 @@
  *
  * Return: Number of the printed characters
  */
+int printf(const char *format, ...);
 int _printf(const char *format, ...)
 {
 	int count = 0, len;
