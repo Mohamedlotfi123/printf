@@ -49,6 +49,10 @@ int _printf(const char *format, ...)
 			{
 				n = va_arg(var_list, int);
 				s = my_itoa(n, x, 10);
+				if (s == NULL)
+				{
+					s = "0";
+				}
 				len = _strlen(s);
 				count += len;
 				write(1, s, len);

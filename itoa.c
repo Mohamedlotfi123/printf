@@ -12,6 +12,10 @@ char *my_itoa(int n, char *str, int b)
 	int i = 0, x = 0, y, digit;
 	char tmp;
 
+	if (n == 0)
+	{
+		return (NULL);
+	}
 	if (b < 2 || b > 36)
 	{
 		return (NULL);
