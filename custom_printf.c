@@ -65,6 +65,34 @@ int _printf(const char *format, ...)
 				count += len;
 				write(1, s, len);
 			}
+			if (*format == 'u')
+			{
+				s = my_itoa(va_arg(var_list, unsigned int), x, 10);
+				len = _strlen(s);
+				count += len;
+				write(1, s, len);
+			}
+			if (*format == 'o')
+			{
+				s = my_itoa(va_arg(var_list, unsigned int), x, 8);
+				len = _strlen(s);
+				count += len;
+				write(1, s, len);
+			}
+			if (*format == 'x')
+			{
+				s = my_itoa(va_arg(var_list, unsigned int), x, 16);
+				len = _strlen(s);
+				count += len;
+				write(1, s, len);
+			}
+			if (*format == 'X')
+			{
+				s = my_itoa(va_arg(var_list, unsigned int), x, 16);
+				len = _strlen(s);
+				count += len;
+				write(1, s, len);
+			}
 		}
 		format++;
 	}
