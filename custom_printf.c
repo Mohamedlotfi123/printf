@@ -47,7 +47,7 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'd' || *format == 'i')
 			{
-				n = va_arg(var_list, int);
+				n = (int)va_arg(var_list, int);
 				s = my_itoa(n, x, 10);
 				if (s == NULL)
 				{
