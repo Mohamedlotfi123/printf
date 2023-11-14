@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'c')
 			{
-				c = (char)va_arg(var_list, int);
+				c = (int)va_arg(var_list, int);
 				count += 1;
 				write(1, &c, 1);
 			}
