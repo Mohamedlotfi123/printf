@@ -16,6 +16,10 @@ int _printf(const char *format, ...)
 	va_start(var_list, format);
 	while (*format != '\0')
 	{
+		if (format == NULL)
+		{
+			break;
+		}
 		if (*format != '%')
 		{
 			write(1, format, 1);
