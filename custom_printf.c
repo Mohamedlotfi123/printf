@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	int count = 0, len;
 	long int n;
-	char c, *s, x[25];
+	char *s, x[25];
 	va_list var_list;
 
 	va_start(var_list, format);
@@ -34,9 +34,9 @@ int _printf(const char *format, ...)
 			}
 			if (*format == 'c')
 			{
-				c = va_arg(var_list, int);
+				len = va_arg(var_list, int);
 				count += 1;
-				write(1, &c, 1);
+				write(1, &len, 1);
 			}
 			if (*format == 's')
 			{
